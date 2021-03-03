@@ -151,6 +151,7 @@ namespace WindowsFormsApp1
             this.lbWagons.Name = "lbWagons";
             this.lbWagons.Size = new System.Drawing.Size(196, 394);
             this.lbWagons.TabIndex = 10;
+            this.lbWagons.SelectedIndexChanged += new System.EventHandler(this.lbWagons_SelectedIndexChanged);
             // 
             // lbAnimalsInWagon
             // 
@@ -182,7 +183,7 @@ namespace WindowsFormsApp1
             // lblTotalWagons
             // 
             this.lblTotalWagons.AutoSize = true;
-            this.lblTotalWagons.Location = new System.Drawing.Point(263, 428);
+            this.lblTotalWagons.Location = new System.Drawing.Point(712, 31);
             this.lblTotalWagons.Name = "lblTotalWagons";
             this.lblTotalWagons.Size = new System.Drawing.Size(86, 13);
             this.lblTotalWagons.TabIndex = 14;
@@ -191,7 +192,7 @@ namespace WindowsFormsApp1
             // lblTotalAnimals
             // 
             this.lblTotalAnimals.AutoSize = true;
-            this.lblTotalAnimals.Location = new System.Drawing.Point(507, 428);
+            this.lblTotalAnimals.Location = new System.Drawing.Point(712, 60);
             this.lblTotalAnimals.Name = "lblTotalAnimals";
             this.lblTotalAnimals.Size = new System.Drawing.Size(82, 13);
             this.lblTotalAnimals.TabIndex = 15;
@@ -201,7 +202,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 457);
+            this.ClientSize = new System.Drawing.Size(876, 457);
             this.Controls.Add(this.lblTotalAnimals);
             this.Controls.Add(this.lblTotalWagons);
             this.Controls.Add(this.lblAnimalsInWagon);
