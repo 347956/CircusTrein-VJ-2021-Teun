@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
         //methods
         //checks if the animal is added to the wagon
         //returns a bool for the train class
-        public bool IsTheAnimalBeAddedToWagon(Diet diet, Weight weight)
+        public bool WagonAddAnimal(Diet diet, Weight weight)
         {
             bool added = false;
             int animalWeight = ConvertWeightClassToInt(weight);

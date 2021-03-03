@@ -16,5 +16,46 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        Train train = new Train();
+
+        private void HerbivorL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHerbivorM_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHerbivorS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCarnivorL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCarnivorM_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCarnivorS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
