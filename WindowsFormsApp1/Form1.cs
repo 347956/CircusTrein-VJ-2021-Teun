@@ -63,6 +63,15 @@ namespace WindowsFormsApp1
         {
             lbAnimalsToBeAdded.Items.Clear();
             train.FillTrain();
+            lblTotalAnimals.Text = $"Total Wagons: {train.WagonAmount}";
+            lblTotalAnimals.Text = $"Total Animals: {train.AnimalCount}";
+            lbWagons.DataSource = train.WagonsRadonly;
+        }
+
+        private void lbAnimalsInWagon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Wagon selectedWagon = (Wagon)Convert.ChangeType(lbWagons.SelectedItem, typeof(Wagon));
+            lbAnimalsInWagon.DataSource = selectedWagon.wagonAnimalsReadOnly;
         }
     }
 }

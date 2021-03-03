@@ -39,6 +39,12 @@ namespace WindowsFormsApp1
             this.btnAdd = new System.Windows.Forms.Button();
             this.lbAnimalsToBeAdded = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbWagons = new System.Windows.Forms.ListBox();
+            this.lbAnimalsInWagon = new System.Windows.Forms.ListBox();
+            this.lblWagons = new System.Windows.Forms.Label();
+            this.lblAnimalsInWagon = new System.Windows.Forms.Label();
+            this.lblTotalWagons = new System.Windows.Forms.Label();
+            this.lblTotalAnimals = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnHerbivorS
@@ -138,11 +144,70 @@ namespace WindowsFormsApp1
             this.label2.TabIndex = 9;
             this.label2.Text = "Animals that will be added:";
             // 
+            // lbWagons
+            // 
+            this.lbWagons.FormattingEnabled = true;
+            this.lbWagons.Location = new System.Drawing.Point(266, 28);
+            this.lbWagons.Name = "lbWagons";
+            this.lbWagons.Size = new System.Drawing.Size(196, 394);
+            this.lbWagons.TabIndex = 10;
+            // 
+            // lbAnimalsInWagon
+            // 
+            this.lbAnimalsInWagon.FormattingEnabled = true;
+            this.lbAnimalsInWagon.Location = new System.Drawing.Point(510, 28);
+            this.lbAnimalsInWagon.Name = "lbAnimalsInWagon";
+            this.lbAnimalsInWagon.Size = new System.Drawing.Size(196, 394);
+            this.lbAnimalsInWagon.TabIndex = 11;
+            this.lbAnimalsInWagon.SelectedIndexChanged += new System.EventHandler(this.lbAnimalsInWagon_SelectedIndexChanged);
+            // 
+            // lblWagons
+            // 
+            this.lblWagons.AutoSize = true;
+            this.lblWagons.Location = new System.Drawing.Point(263, 12);
+            this.lblWagons.Name = "lblWagons";
+            this.lblWagons.Size = new System.Drawing.Size(50, 13);
+            this.lblWagons.TabIndex = 12;
+            this.lblWagons.Text = "Wagons:";
+            // 
+            // lblAnimalsInWagon
+            // 
+            this.lblAnimalsInWagon.AutoSize = true;
+            this.lblAnimalsInWagon.Location = new System.Drawing.Point(507, 12);
+            this.lblAnimalsInWagon.Name = "lblAnimalsInWagon";
+            this.lblAnimalsInWagon.Size = new System.Drawing.Size(96, 13);
+            this.lblAnimalsInWagon.TabIndex = 13;
+            this.lblAnimalsInWagon.Text = "Animals In Wagon:";
+            // 
+            // lblTotalWagons
+            // 
+            this.lblTotalWagons.AutoSize = true;
+            this.lblTotalWagons.Location = new System.Drawing.Point(263, 428);
+            this.lblTotalWagons.Name = "lblTotalWagons";
+            this.lblTotalWagons.Size = new System.Drawing.Size(86, 13);
+            this.lblTotalWagons.TabIndex = 14;
+            this.lblTotalWagons.Text = "Total Wagons: 0";
+            // 
+            // lblTotalAnimals
+            // 
+            this.lblTotalAnimals.AutoSize = true;
+            this.lblTotalAnimals.Location = new System.Drawing.Point(507, 428);
+            this.lblTotalAnimals.Name = "lblTotalAnimals";
+            this.lblTotalAnimals.Size = new System.Drawing.Size(82, 13);
+            this.lblTotalAnimals.TabIndex = 15;
+            this.lblTotalAnimals.Text = "Total Animals: 0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 457);
+            this.Controls.Add(this.lblTotalAnimals);
+            this.Controls.Add(this.lblTotalWagons);
+            this.Controls.Add(this.lblAnimalsInWagon);
+            this.Controls.Add(this.lblWagons);
+            this.Controls.Add(this.lbAnimalsInWagon);
+            this.Controls.Add(this.lbWagons);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbAnimalsToBeAdded);
             this.Controls.Add(this.btnAdd);
@@ -172,6 +237,12 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ListBox lbAnimalsToBeAdded;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox lbWagons;
+        private System.Windows.Forms.ListBox lbAnimalsInWagon;
+        private System.Windows.Forms.Label lblWagons;
+        private System.Windows.Forms.Label lblAnimalsInWagon;
+        private System.Windows.Forms.Label lblTotalWagons;
+        private System.Windows.Forms.Label lblTotalAnimals;
     }
 }
 

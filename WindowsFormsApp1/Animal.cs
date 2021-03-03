@@ -19,11 +19,16 @@ namespace WindowsFormsApp1
             this.Weight = weight;
         }
         //methods
-        public bool AnimalCompatibilityCheck (Diet diet, Weight weight)
-        {
-            //Two Carnivors are never compatible
+        public bool AnimalCompatibilityCheck (Diet diet, Weight weight, int wagonUsedCapacity)
+        {            
             bool compatible = false;
-            if (Diet == Diet.Carnivor && diet == Diet.Carnivor)
+            //A large Carnivor is only Compatible when there are no other animals
+            if (diet == Diet.Carnivor && weight == Weight.Large && wagonUsedCapacity == 0)
+            {
+                compatible = true;
+            }
+            //Two Carnivors are never compatible
+            else if (Diet == Diet.Carnivor && diet == Diet.Carnivor)
             {
                 compatible = false;
             }
@@ -32,15 +37,15 @@ namespace WindowsFormsApp1
             {
                 compatible = true;
             }
-            //If the animal that's going to be added is a Carnivor
-            else if(diet == Diet.Carnivor)
-            {
-                compatible = ExternalCarnivorCompatibilityCheck(weight);
-            }
             //If the animal inside the wagon is already a Carnivor
             else if (Diet == Diet.Carnivor)
             {
                 compatible = InternalCarnivorCompatibilityCheck(weight);
+            }
+            //If the animal that's going to be added is a Carnivor
+            else if(diet == Diet.Carnivor)
+            {
+                compatible = ExternalCarnivorCompatibilityCheck(weight);
             }
             else
             {

@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
             bool added = false;
             int animalWeight = ConvertWeightClassToInt(weight);
             bool full = CheckIfThereIsRoomInWagon(animalWeight);
-            bool compatible = CheckIfTheAnimalIscompatible(diet, weight);
+            bool compatible = CheckIfTheAnimalIscompatible(diet, weight, WagonCurrentWeight);
             if(full == false && compatible == true)
             {
                 AddAnimalToWagon(diet, weight, animalWeight);
@@ -80,23 +80,39 @@ namespace WindowsFormsApp1
             //The animal is to big and can't be added tot the wagon
             else if (WagonCurrentWeight + weight > 10)
             {
-                full = false;
+                full = true;
             }
             else
             {
-                full = true;
+                full = false;
             }
             return full;
         }
         //checks if all the animals in the wwagon are compatible with the new animal
-        private bool CheckIfTheAnimalIscompatible(Diet diet, Weight weight)
+        private bool CheckIfTheAnimalIscompatible(Diet diet, Weight weight, int usedCapacity)
         {
             bool compatible = false;
-            foreach (Animal animal in wagonAnimals)
+            //If there are no animals in the wagon yet, it will always be compatible
+            if(WagonCurrentWeight == 0)
             {
-                compatible = animal.AnimalCompatibilityCheck(diet, weight);
+                compatible = true;
+            }
+            else
+            {
+                foreach (Animal animal in wagonAnimals)
+                {
+                    compatible = animal.AnimalCompatibilityCheck(diet, weight, usedCapacity);
+                    if(compatible == false)
+                    {
+                        break;
+                    }
+                }
             }
             return compatible;
+        }
+        public override string ToString()
+        {
+           return $"Wagon#{WagonNumber} || Cap: {WagonMaxWeight} || Used-Cap: {WagonCurrentWeight}";
         }
     }
 }
