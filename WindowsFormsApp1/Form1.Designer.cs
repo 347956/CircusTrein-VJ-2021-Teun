@@ -59,7 +59,7 @@ namespace WindowsFormsApp1
             // 
             // btnCarnivorL
             // 
-            this.btnCarnivorL.Location = new System.Drawing.Point(108, 60);
+            this.btnCarnivorL.Location = new System.Drawing.Point(108, 31);
             this.btnCarnivorL.Name = "btnCarnivorL";
             this.btnCarnivorL.Size = new System.Drawing.Size(96, 23);
             this.btnCarnivorL.TabIndex = 1;
@@ -99,7 +99,7 @@ namespace WindowsFormsApp1
             // 
             // btnCarnivorM
             // 
-            this.btnCarnivorM.Location = new System.Drawing.Point(108, 31);
+            this.btnCarnivorM.Location = new System.Drawing.Point(108, 60);
             this.btnCarnivorM.Name = "btnCarnivorM";
             this.btnCarnivorM.Size = new System.Drawing.Size(96, 23);
             this.btnCarnivorM.TabIndex = 5;

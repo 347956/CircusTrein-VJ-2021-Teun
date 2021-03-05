@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    class Train
+    public class Train
     {
         //properties
         public string Name { get; private set; }
         public int WagonAmount { get; private set; }
         public int AnimalCount { get; private set; }
-
         //lists
         private List<Wagon> wagons = new List<Wagon>();
         private List<Animal> animalsToAdd = new List<Animal>();
-        public IReadOnlyList<Wagon> WagonsRadonly => wagons.AsReadOnly();
+        public IReadOnlyList<Wagon> WagonsReadonly => wagons.AsReadOnly();
+        public IReadOnlyList<Animal> animalsToAddReadonly => animalsToAdd.AsReadOnly();
 
         //constructor
         public Train()
@@ -31,6 +31,7 @@ namespace WindowsFormsApp1
         public void AddAnimalsToList(Diet diet, Weight weight)
         {
             animalsToAdd.Add(new Animal(diet, weight));
+
         }
         //Starts filling the wagons with the animals
         public void FillTrain()

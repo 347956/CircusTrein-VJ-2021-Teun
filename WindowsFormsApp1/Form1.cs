@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
             train.FillTrain();
             lblTotalWagons.Text = $"Total Wagons: {train.WagonAmount}";
             lblTotalAnimals.Text = $"Total Animals: {train.AnimalCount}";
-            lbWagons.DataSource = train.WagonsRadonly;
+            lbWagons.DataSource = train.WagonsReadonly;
         }
 
         private void lbAnimalsInWagon_SelectedIndexChanged(object sender, EventArgs e)
