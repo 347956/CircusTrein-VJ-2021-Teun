@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    class Animal
+    public class Animal
     {
         //properties
         public Diet Diet { get; private set; }
@@ -19,13 +19,13 @@ namespace WindowsFormsApp1
             this.Weight = weight;
         }
         //methods
-        public bool AnimalCompatibilityCheck (Diet diet, Weight weight, int wagonUsedCapacity)
+        public bool AnimalCompatibilityCheck (Diet diet, Weight weight)
         {            
             bool compatible = false;
             //A large Carnivor is only Compatible when there are no other animals
-            if (diet == Diet.Carnivor && weight == Weight.Large && wagonUsedCapacity == 0)
+            if (diet == Diet.Carnivor && weight == Weight.Large)
             {
-                compatible = true;
+                compatible = false;
             }
             //Two Carnivors are never compatible
             else if (Diet == Diet.Carnivor && diet == Diet.Carnivor)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    class Wagon
+    public class Wagon
     {
         //properties
         public int WagonNumber { get; private set; }
@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
             bool added = false;
             int animalWeight = ConvertWeightClassToInt(weight);
             bool full = CheckIfThereIsRoomInWagon(animalWeight);
-            bool compatible = CheckIfTheAnimalIscompatible(diet, weight, WagonCurrentWeight);
+            bool compatible = CheckIfTheAnimalIscompatible(diet, weight);
             if(full == false && compatible == true)
             {
                 AddAnimalToWagon(diet, weight, animalWeight);
@@ -89,7 +89,7 @@ namespace WindowsFormsApp1
             return full;
         }
         //checks if all the animals in the wwagon are compatible with the new animal
-        private bool CheckIfTheAnimalIscompatible(Diet diet, Weight weight, int usedCapacity)
+        private bool CheckIfTheAnimalIscompatible(Diet diet, Weight weight)
         {
             bool compatible = false;
             //If there are no animals in the wagon yet, it will always be compatible
@@ -101,7 +101,7 @@ namespace WindowsFormsApp1
             {
                 foreach (Animal animal in wagonAnimals)
                 {
-                    compatible = animal.AnimalCompatibilityCheck(diet, weight, usedCapacity);
+                    compatible = animal.AnimalCompatibilityCheck(diet, weight);
                     if(compatible == false)
                     {
                         break;
